@@ -10,7 +10,7 @@ namespace Domain.Responses.GenericResponses
     {
         public int Status { get; set; } = 200;
         public string Message { get; set; } = string.Empty;
-        public object? ResponseData { get; set; }
+        public object? Data { get; set; }
         public string? ErrorMessage { get; set; }
 
         public DateTime Date { get; set; } = DateTime.Now;

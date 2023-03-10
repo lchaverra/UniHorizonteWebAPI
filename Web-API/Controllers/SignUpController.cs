@@ -1,4 +1,6 @@
-﻿using Application.SignUp;
+﻿
+
+using Application.Services.SignUp;
 
 using Domain.Models;
 using Domain.Responses.GenericResponses;

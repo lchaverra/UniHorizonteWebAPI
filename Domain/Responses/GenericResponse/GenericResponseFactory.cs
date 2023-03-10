@@ -7,7 +7,7 @@ namespace Domain.Responses.GenericResponses {
       GenericResponse oGeneralResponse = new();
       oGeneralResponse.Status = (int) HttpStatusCode.OK;
       oGeneralResponse.Message = "¡El proceso se ha ejecutado correctamente!";
-      oGeneralResponse.ResponseData = resultData;
+      oGeneralResponse.Data = resultData;
       oGeneralResponse.Date = DateTime.Now;
       return oGeneralResponse;
     }
@@ -16,7 +16,7 @@ namespace Domain.Responses.GenericResponses {
       GenericResponse oGeneralResponse = new();
       oGeneralResponse.Status = (int) HttpStatusCode.Created;
       oGeneralResponse.Message = "¡Registros procesados correctamente!";
-      oGeneralResponse.ResponseData = resultData;
+      oGeneralResponse.Data = resultData;
       oGeneralResponse.Date = DateTime.Now;
       return oGeneralResponse;
     }
@@ -25,7 +25,7 @@ namespace Domain.Responses.GenericResponses {
       GenericResponse oGeneralResponse = new();
       oGeneralResponse.Status = (int) HttpStatusCode.NoContent;
       oGeneralResponse.Message = "¡No existen registros para la petición realizada!";
-      oGeneralResponse.ResponseData = null;
+      oGeneralResponse.Data = null;
       oGeneralResponse.Date = DateTime.Now;
       return oGeneralResponse;
     }
@@ -35,7 +35,7 @@ namespace Domain.Responses.GenericResponses {
       oGeneralResponse.Status = (int) HttpStatusCode.InternalServerError;
       oGeneralResponse.Message = "Internal Server Error";
       oGeneralResponse.ErrorMessage = exception.Message ?? "¡Ha ocurrido un error inesperado!";
-      oGeneralResponse.ResponseData = null;
+      oGeneralResponse.Data = null;
       oGeneralResponse.Date = DateTime.Now;
       return oGeneralResponse;
     }
@@ -44,7 +44,7 @@ namespace Domain.Responses.GenericResponses {
       oGeneralResponse.Status = (int) HttpStatusCode.BadRequest;
       oGeneralResponse.Message = "Bad Request";
       oGeneralResponse.ErrorMessage = message;
-      oGeneralResponse.ResponseData = null;
+      oGeneralResponse.Data = null;
       oGeneralResponse.Date = DateTime.Now;
       return oGeneralResponse;
     }

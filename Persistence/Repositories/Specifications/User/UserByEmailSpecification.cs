@@ -10,7 +10,6 @@ using Persistence.Entities;
 
 namespace Persistence.Repositories.Specifications.User {
   public class UserByEmailSpecification : Specification<TblUsuario> {
-
     public UserByEmailSpecification(string email) {
       Query.Where(user => user.Correo.Equals(email));
     }
